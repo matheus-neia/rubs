@@ -17,6 +17,7 @@ public class TranslatorEngine {
 	
 	public void setFirefoxDriver () {
 		driver = new FirefoxDriver();
+		//testando
 	}
 	
 	public void setChromeDriver () {
