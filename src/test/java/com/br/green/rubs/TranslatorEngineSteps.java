@@ -28,9 +28,14 @@ public class TranslatorEngineSteps {
 		engine.setSafariDriver();
 	}
 
-	@When("a text to be translated is $text")
-	public void translate(String text) {
-		result = engine.translateSource(text);
+	@Given("a IE browser")
+	public void setIEBrowser() {
+		engine.setIEDriver();
+	}
+
+	@When("a text to be translated is $text from $from to $to")
+	public void translate(String text, String from, String to) {
+		result = engine.translateSource(text, from, to);
 	}
 	
 	@Then("the translation should be $suggestion")
